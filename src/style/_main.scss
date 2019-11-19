@@ -1,0 +1,61 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3;
+
+    font-family: "Changa", serif;
+
+    color: rgb(255, 194, 72);
+
+     p:nth-of-type(1) {
+         margin-bottom: 45px;
+     }
+
+     p:nth-of-type(2) {
+        margin-bottom: 24px;
+    }
+
+     a:nth-of-type(1) {
+        margin-top: 60px;
+     }
+
+    &-wrapper {
+        max-width: 550px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+
+        position: relative;
+        padding-left: 40px;
+    }
+
+    @include breakpoint(1100) { 
+        padding-right: 40px;
+    }
+
+    @include breakpoint(400) {
+        .wrapper {
+            width: 300px;
+        }
+    }
+
+    @include breakpoint_h(668) {
+        &-wrapper {
+            align-self: flex-end;
+            margin-bottom: 40px;
+        }
+    }
+
+    @include breakpoint_h(568) {
+        &-wrapper {
+            align-self: flex-end;
+
+            margin-bottom: 20px;
+        }
+
+        a:nth-of-type(1) {
+            margin-top: 30px;
+         }
+    }
+}

@@ -1,0 +1,48 @@
+@import "./mixins";
+
+.header {
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 auto;
+    padding: 60px 40px 20px;
+
+    z-index: 10;
+
+    @include breakpoint(450) {
+        padding: 15px;
+    }
+
+    &__logo {       
+        margin: 0;
+
+        font-size: 32.5px;
+        font-weight: 800;
+
+        &-wrapper {
+            font-family: "Montserrat", serif;
+            color: #fff;
+            margin-right: 25px;
+        }
+
+        &_bottom {
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+}
+
+.header-wrapper {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+
+    z-index: 12;
+
+    &_background {
+        background-color: #040b34;
+    }
+}
