@@ -2,9 +2,7 @@ import React from 'react';
 import './main.scss';
 
 export class App extends React.Component {
-  state = {
-    headerBack: false,
-  }
+  state = { headerBack: false }
 
   listenScrollEvent = e => {
     if (window.scrollY > 50) {
